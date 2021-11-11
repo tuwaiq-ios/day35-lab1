@@ -7,8 +7,12 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    var locationManger: CLLocationManager!
+    
     lazy var mapview : MKMapView = {
         let mv = MKMapView()
         mv.translatesAutoresizingMaskIntoConstraints = false
@@ -26,20 +30,32 @@ class ViewController: UIViewController {
             mapview.leftAnchor.constraint(equalTo: view.leftAnchor),
             mapview.rightAnchor.constraint(equalTo: view.rightAnchor),
             mapview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
         
         ])
-        let Asir = MKPointAnnotation()
-        Asir.title = "Sara 💜"
-        Asir.coordinate = CLLocationCoordinate2D(latitude: 18.2497107, longitude: 42.4584669)
-        mapview.addAnnotation(Asir)
+        if  (CLLocationManager.locationServicesEnabled())
+        {
+            locationManger = CLLocationManager()
+            locationManger.delegate = self
+            locationManger.desiredAccuracy = kCLLocationAccuracyBest
+            locationManger.requestAlwaysAuthorization()
+            locationManger.startUpdatingHeading()
+        }
     }
-
-
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        guard let location = locations.last else {return}
+        let lat = location.coordinate.latitude
+        let long = location.coordinate.longitude
+        
+        let loc = MKPointAnnotation()
+        loc.title = "Makkah"
+        loc.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        mapview.addAnnotation(loc)
+    }
 }
-extension ViewController: MKMapViewDelegate{
     
     
-}
+
 
 
