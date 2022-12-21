@@ -3,7 +3,4 @@
 
 ## Deadline
 11 Nov
-
-<div style="width: 60%; height: 60%">
-- Getx ![IMG_9840](https://user-images.githubusercontent.com/91421012/208846432-8cd4f10f-9990-471e-a162-e66b5d5cdaa1.jpg)
-</div>
+- Getx ![IMG_9840](https://user-images.githubusercontent.com/91421012/208846432-8cd4f10f-9990-471e-a162-e66b5d5cdaa1.jpg width=50% height=50%)
