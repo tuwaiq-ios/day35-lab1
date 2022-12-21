@@ -3,5 +3,6 @@
 
 ## Deadline
 11 Nov
-- Getx <img src="![IMG_9844](https://user-images.githubusercontent.com/91421012/208850499-da3ccccc-a875-4e42-9ba9-daad1083f4ce.jpg)
- " width="100" height="100" />
+- Getx ![IMG_9840](https://user-images.githubusercontent.com/91421012/208854337-bda05764-dcf6-4201-ae1c-4c9e6f455c07.jpg)
+<img src="https://user-images.githubusercontent.com/91421012/208854337-bda05764-dcf6-4201-ae1c-4c9e6f455c07.jpg" width="100" height="100">
+
